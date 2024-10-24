@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Recommendations</title>
+</head>
+
+<head>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<div class="container">
+    <h2>User Dashboard</h2>
+    <div class="card-deck">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Current Weight</h5>
+                <p class="card-text">{{ user.current_weight }} kg</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Target Weight</h5>
+                <p class="card-text">{{ user.target_weight }} kg</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Calories Burned</h5>
+                <p class="card-text">{{ total_calories_burned }} kcal</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Calories Consumed</h5>
+                <p class="card-text">{{ total_calories_consumed }} kcal</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<body>
+    <h1>Your Diet and Exercise Recommendations</h1>
+    <p>{{ recommendation }}</p>
+    <a href="/">Go Back</a>
+</body>
+
+</html>

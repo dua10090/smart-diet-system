@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Your Progress</title>
+</head>
+
+<body>
+    <h1>Welcome, {{ user.name }}</h1>
+    <p>Current Weight: {{ user.weight }} kg</p>
+    <p>Target Weight: {{ user.target_weight }} kg</p>
+
+    <h2>Today's Recommendations</h2>
+    <p>{{ recommendation }}</p>
+
+    <head>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+
+    <h2>Your Progress</h2>
+    <img src="data:image/png;base64,{{ plot_url }}" alt="Weight Progress">
+
+    <h2>Update Progress</h2>
+    <form action="/progress" method="POST">
+        <input type="hidden" name="user_id" value="{{ user.id }}">
+
+        <label for="date">Date:</label><br>
+        <input type="date" id="date" name="date" required><br><br>
+
+        <label for="current_weight">Current Weight (kg):</label><br>
+        <input type="number" id="current_weight" name="current_weight" required><br><br>
+
+        <label for="calories_consumed">Calories Consumed:</label><br>
+        <input type="number" id="calories_consumed" name="calories_consumed" required><br><br>
+
+        <label for="calories_burned">Calories Burned:</label><br>
+        <input type="number" id="calories_burned" name="calories_burned" required><br><br>
+
+        <input type="submit" value="Update Progress">
+    </form>
+</body>
+
+</html>

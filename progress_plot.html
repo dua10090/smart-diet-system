@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Chart</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Your Progress</title>
+</head>
+
+<body>
+    <h1>Weight Progress Over Time</h1>
+    <img src="data:image/png;base64,{{ plot_url }}" alt="Progress Graph">
+    <a href="/track">Go Back</a>
+</body>
+
+<body>
+    <canvas id="progressChart"></canvas>
+    <script src="progressChart.js"></script>
+</body>
+
+</html>
